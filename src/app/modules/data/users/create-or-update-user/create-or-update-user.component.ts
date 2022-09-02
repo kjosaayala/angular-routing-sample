@@ -12,28 +12,28 @@ import { UsersService } from '../users.service';
 export class CreateOrUpdateUserComponent implements OnInit, OnDestroy {
   id: number = 0;
   Model: EmployeeModel = new EmployeeModel();
-  routeSub?: Subscription;
+  routeSub: Subscription;
 
   constructor(
-    private _route: ActivatedRoute,
-    private _router: Router,
-    private _usersService: UsersService
-  ) {
-    this.routeSub = this._route.params.subscribe((params) => {
-      this.id = Number(params['id']);
-    });
-  }
+    private route: ActivatedRoute,
+    private router: Router,
+    private usersService: UsersService
+  ) {}
 
   ngOnDestroy(): void {
     this.routeSub?.unsubscribe();
   }
 
   ngOnInit(): void {
-    if (this.id > 0) {
-      this.showUpdate(this.id);
-    } else {
-      this.showAdd();
-    }
+    this.routeSub = this.route.params.subscribe(({ id }) => {
+      this.id = Number(id);
+
+      if (this.id > 0) {
+        this.showUpdate(this.id);
+      } else {
+        this.showAdd();
+      }
+    });
   }
 
   showAdd() {
@@ -41,11 +41,10 @@ export class CreateOrUpdateUserComponent implements OnInit, OnDestroy {
   }
 
   showUpdate(id: number) {
-    this.Model = this._usersService.getEmployeeById(id);
-    debugger;
+    this.Model = this.usersService.getEmployeeById(id);
   }
 
   onBack() {
-    this._router.navigate(['/users/']);
+    this.router.navigate(['/users/']);
   }
 }

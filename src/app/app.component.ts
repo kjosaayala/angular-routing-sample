@@ -9,14 +9,11 @@ import viewSettings from './configurations/view-settings';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'angular-routing-sample';
-  isLogged: boolean = false;
+  title = 'Angular Routing';
 
-  viewSettings;
-  /**
-   *
-   */
-  constructor(private router: Router, private _authService: AuthService) {
+  viewSettings: any;
+
+  constructor(private authService: AuthService) {
     this.viewSettings = viewSettings;
   }
 
@@ -25,13 +22,12 @@ export class AppComponent implements OnInit {
   }
 
   logout() {
-    this._authService.logout();
+    this.authService.logout();
     this.checkLoggedUser();
   }
 
   checkLoggedUser() {
-    let login = this._authService.currentUserValue;
-
+    let login = this.authService.currentUserValue;
     if (!login) {
       this.viewSettings.showSideMenu = false;
     } else {

@@ -27,7 +27,7 @@ export class AuthService {
 
   login(userAuth: AuthUserModel): any {
     let userLogin = this.usersDb.find((x) => x.username === userAuth.username);
-debugger;
+
     if (userLogin) {
       if (userLogin.password === userAuth.password) {
         userAuth.id = userLogin.id;

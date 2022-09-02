@@ -8,7 +8,7 @@ import {
 import { AuthService } from '../views/auth/auth.service';
 
 @Injectable({ providedIn: 'root' })
-export class ActivateRoute implements CanActivate {
+export class VeryCanActivateRoute implements CanActivate {
   constructor(private router: Router, private authService: AuthService) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
@@ -16,9 +16,7 @@ export class ActivateRoute implements CanActivate {
     if (currentUser) {
       return true;
     } else {
-      this.router.navigate(['/login'], {
-        queryParams: { },
-      });
+      this.router.navigate(['/login']);
       return false;
     }
   }
