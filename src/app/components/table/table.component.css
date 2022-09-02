@@ -1,0 +1,10 @@
+table {
+    width: 70%;
+    max-height: 60%;
+    min-height: 60%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 70%;
+  }

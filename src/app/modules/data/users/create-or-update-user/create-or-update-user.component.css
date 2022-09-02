@@ -1,0 +1,22 @@
+.container {
+  height: 100%;
+  width: calc(100% - 300px);
+  margin-left: 300px;
+  min-height: 100%;
+  background-color: #605e5c;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.container .main-div {
+  padding-top: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container .main-div .datos {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}

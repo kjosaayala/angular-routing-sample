@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="sidebar" *ngIf="viewSettings.showSideMenu">
+    <div class="content">
+      <h2 class="">Menu</h2>
+      <mat-nav-list>
+        <mat-list-item>
+          <h4 matLine routerLink="/home" routerLinkActive="active-link">
+            Home
+          </h4>
+        </mat-list-item>
+      </mat-nav-list>
+      <mat-nav-list>
+        <mat-list-item>
+          <h4 matLine routerLink="/users" routerLinkActive="active-link">
+            Users
+          </h4>
+        </mat-list-item>
+      </mat-nav-list>
+      <br class="" />
+      <br class="" />
+      <button mat-raised-button color="primary" (click)="logout()">
+        Desconectar
+      </button>
+    </div>
+  </div>
+  <div
+    [ngClass]="{
+      'main-div-sidebar': viewSettings.showSideMenu,
+      'main-div': !viewSettings.showSideMenu
+    }"
+  >
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>    
+  </div>
+</div>

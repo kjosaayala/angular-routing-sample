@@ -1,0 +1,78 @@
+{
+  "users": [
+    { "id": 1, "username": "kensyayala", "password": "angular1234" },
+    { "id": 2, "username": "test", "password": "angular1234" }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "fullname": "Steve Jobs",
+      "age": 40,
+      "address": "SPS Cortes",
+      "phone": "2255-1415"
+    },
+    {
+      "id": 2,
+      "fullname": "Leonel Suarez",
+      "age": 35,
+      "address": "Villanueva Cortes",
+      "phone": "3687-1111"
+    },
+    {
+      "id": 3,
+      "fullname": "Mario Duarte",
+      "age": 40,
+      "address": "San Antonio Cortes",
+      "phone": "3674-4789"
+    },
+    {
+      "id": 4,
+      "fullname": "Valeria Casco",
+      "age": 40,
+      "address": "Omoa Cortes",
+      "phone": "3335-7898"
+    },
+    {
+      "id": 5,
+      "fullname": "Cristina Leon",
+      "age": 40,
+      "address": "Lima Cortes",
+      "phone": "3699-1214"
+    },
+    {
+      "id": 6,
+      "fullname": "Mauricio Castro",
+      "age": 40,
+      "address": "El Progreso Yoro",
+      "phone": "6974-2536"
+    },
+    {
+      "id": 7,
+      "fullname": "Josue Castro",
+      "age": 40,
+      "address": "La Ceiba Atlantida",
+      "phone": "2222-3657"
+    },
+    {
+      "id": 8,
+      "fullname": "Angel Martinez",
+      "age": 40,
+      "address": "Tela Atlantida",
+      "phone": "6687-1211"
+    },
+    {
+      "id": 9,
+      "fullname": "Andrea Lopez",
+      "age": 40,
+      "address": "SPS Cortes",
+      "phone": "7485-3368"
+    },
+    {
+      "id": 10,
+      "fullname": "Carlos Perez",
+      "age": 40,
+      "address": "SPS Cortes",
+      "phone": "2574-1425"
+    }
+  ]
+}

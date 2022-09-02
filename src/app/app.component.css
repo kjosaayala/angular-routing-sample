@@ -1,0 +1,55 @@
+.container {
+  background-color: rgba(48, 48, 48, 255);
+  height: 100%;
+}
+
+.container .side-bar {
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+}
+
+.container .side-bar .side-menu {
+  width: 300px;
+}
+
+.container .side-bar .content {
+  padding-top: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container .sidebar {
+  width: 300px;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.25);  
+}
+
+.container .sidebar .content {
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 10px;
+}
+
+.container .main-div-sidebar {
+  width: calc(100% - 300px);
+}
+
+.container .main-div {
+  width: 100%;
+}
+
+.container .main-div .content {
+  padding-top: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}

@@ -1,0 +1,20 @@
+.container {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.container .main-div {
+  left: 50%;
+  top: 50%;
+  width: 400px;
+  height: 600px;
+  left: 50%;
+  padding: 5vmin;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.container .main-div .fields {
+  width: 400px;
+}

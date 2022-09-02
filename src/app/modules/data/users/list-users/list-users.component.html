@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="main-div">
+    <h1 class="">Listado de usuarios</h1>
+    <br class="" />
+    <button mat-raised-button color="primary" (click)="onClickNew()">
+      Crear
+    </button>
+    <br class="" />
+    <app-table
+      [showFilter]="true"
+      [data]="empleados"
+      [columns]="columns"
+      (onEdit)="update($event)"
+    ></app-table>
+  </div>
+</div>

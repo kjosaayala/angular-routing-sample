@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="main-div">
+    <h1 class="" *ngIf="id > 0">User #{{ Model.id }}</h1>
+    <br class="" />
+    <button mat-raised-button color="primary" (click)="onBack()">
+      Regresar
+    </button>
+    <br class="" />
+    <br class="" />
+    <div class="datos">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre y apellido</mat-label>
+        <input matInput [(ngModel)]="Model.fullname" name="fullname" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Edad</mat-label>
+        <input type="number" matInput [(ngModel)]="Model.age" name="age" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Direccion</mat-label>
+        <input matInput [(ngModel)]="Model.address" name="address" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Telefono</mat-label>
+        <input matInput [(ngModel)]="Model.phone" name="phone" />
+      </mat-form-field>
+    </div>
+  </div>
+</div>
